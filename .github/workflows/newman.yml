@@ -12,6 +12,8 @@ jobs:
       - name: Install Newman Html reporter
         run:
              sudo npm install -g newman-reporter-htmlextra
+      - name: Audit fix
+        run:
              npm audit fix
       - name: Run API Test
         run: 

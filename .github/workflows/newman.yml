@@ -6,12 +6,9 @@ jobs:
   automated-api-tests2:
     runs-on: ubuntu-latest
     steps: 
-      - name: Install Newman and Html reporter
-        run: 
-             sudo npm install -g newman
-             sudo npm install -g newman-reporter-htmlextra
+
       - name: Run API Test
         run: 
              newman run "https://api.getpostman.com/collections/6481556-0298176c-000b-4892-b442-37048662f4e7?apikey=${{ secrets.POSTMAN_API_KEY2 }}" 
              --environment "https://api.getpostman.com/environments/6481556-3ebaebe0-8659-455d-bdbf-6a1dac58fb44?apikey=${{ secrets.POSTMAN_API_KEY2 }}" 
-             -r cli,htmlextra
+             -r htmlextra

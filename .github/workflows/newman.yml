@@ -9,8 +9,6 @@ jobs:
       - name: Install Newman
         run: 
              npm install -g newman
-      - name: Install Newman Html reporter
-        run:
              npm install -g newman-reporter-htmlextra
       - name: Run API Test
         run: 

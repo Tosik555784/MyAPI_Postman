@@ -27,7 +27,7 @@ jobs:
              --environment "https://api.getpostman.com/environments/6481556-3ebaebe0-8659-455d-bdbf-6a1dac58fb44?apikey=${{ secrets.POSTMAN_API_KEY2 }}" 
              -r cli,htmlextra --reporter-htmlextra-export testResults/htmlreport.html
       - name: Output the run Details
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with: 
           name: RunReports
           path: testResults

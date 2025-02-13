@@ -29,6 +29,7 @@ jobs:
       
       - name: Output the run Details
         uses: actions/upload-artifact@v4
+        if: always()
         with: 
           name: RunReports
           path: testResults
